@@ -41,8 +41,8 @@ pub async fn get_collateral(
             .map_err(|_| anyhow!("get fmspc error"))?
     );
     let client = reqwest::Client::builder()
-        .danger_accept_invalid_certs(true)
-        .timeout(timeout)
+        // .danger_accept_invalid_certs(true)
+        // .timeout(timeout)
         .build()?;
     let base_url = pccs_url.trim_end_matches('/');
 
